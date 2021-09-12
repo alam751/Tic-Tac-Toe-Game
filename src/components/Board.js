@@ -35,11 +35,14 @@ const Board = () => {
 
   // on winning
   const winner = gameLogic(gameState);
+
   const winnerHighlight = winner.lines;
   const keyframesStyle = winner.winner1 && "winnerArea";
 
   useEffect(() => {
-    if (winner.winner1) {
+    const winner = gameLogic(gameState);
+    const winnerHighlight = winner.lines;
+    if (winnerHighlight) {
       setWinnerPlayer(`Hurrah! The winner is player ${currentPlayer}`);
       setCurrentPlayer(" ");
     } else if (currentPlayer === " ") {
@@ -47,6 +50,7 @@ const Board = () => {
     } else {
       currentPlayer === "X" ? setCurrentPlayer("0") : setCurrentPlayer("X");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameState]);
 
   const renderSquare = (i) => {
