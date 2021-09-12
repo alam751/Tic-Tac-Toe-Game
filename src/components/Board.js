@@ -47,6 +47,9 @@ const Board = () => {
       setCurrentPlayer(" ");
     } else if (currentPlayer === " ") {
       setCurrentPlayer("X");
+    } else if (!gameState.includes(null)) {
+      setWinnerPlayer("Match Draw");
+      setCurrentPlayer(" ");
     } else {
       currentPlayer === "X" ? setCurrentPlayer("0") : setCurrentPlayer("X");
     }
