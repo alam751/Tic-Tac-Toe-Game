@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+body {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  background: #ddd;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  margin: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  background: #ddd;
+}
+.containerStyle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+/* Heading*/
+
+.heading {
+  font-size: 50px;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.instructionsStyle {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* winner styling */
+
+.winner {
+  height: 25px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: blue;
+}
+#winnerArea {
+  animation-name: example;
+  animation-duration: 8s;
+}
+@keyframes example {
+  0% {
+    color: blue;
   }
-  to {
-    transform: rotate(360deg);
+  20% {
+    color: #da4052;
+  }
+  40% {
+    color: #49e2be;
+  }
+  60% {
+    color: #164c61;
+  }
+  80% {
+    color: black;
+  }
+  100% {
+    color: #da9b1e;
+  }
+}
+
+/* Next player */
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 500px;
+}
+.nextPlayer {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+/*Reset button*/
+
+.buttonStyle {
+  margin-top: 15px;
+  margin-bottom: 16px;
+  width: 80px;
+  height: 35px;
+  background-color: rgb(155, 78, 226);
+  color: white;
+  font-size: 20px;
+  border: none;
+  transition: all 0.5s linear;
+}
+.buttonStyle:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+}
+
+/* Square Board*/
+
+.boardStyle {
+  background-color: #eee;
+  width: 335px;
+  height: 335px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.rowStyle {
+  display: flex;
+}
+
+/*Each square cell*/
+
+.squareStyle {
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+  margin: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 800;
+  color: black;
+  box-shadow: 2px 3px 5px grey;
+}
+.squareStyle:hover {
+  cursor: pointer;
+  background-color: rgb(94, 193, 233);
+}
+#squarehighlight {
+  background-color: rgb(92, 233, 92);
+}
+
+/*media screen*/
+
+@media screen and (max-width: 495px) {
+  body {
+    width: 440px;
+  }
+  #root {
+    margin: 0;
+    margin-top: 25px;
+    width: auto;
+  }
+  .heading {
+    font-size: 40px;
+    font-weight: 700;
   }
 }
