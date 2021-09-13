@@ -4,7 +4,7 @@
 
 ## Demo
 
-![Tic-Tac-Toe_game](https://user-images.githubusercontent.com/84847269/132991480-4f005022-6a14-4113-ab3d-fe8cde239cfc.gif)
+![Tic-Tac-Toe-game](https://user-images.githubusercontent.com/84847269/133038689-d0d6fe09-ca3c-4894-9f70-8f214bfad578.gif)
 
 ## Live URL :-
 
